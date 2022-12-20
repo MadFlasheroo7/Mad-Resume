@@ -1,0 +1,193 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage{fontawesome5}
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+    \usepackage[defaultfam,tabular,lining]{montserrat} %% Option 'defaultfam'
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1} }
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \bfseries \scshape {Jayesh Seth}}\\
+	\faIcon{map-pin} Tamil Nadu, Coimbatore $\cdot$ 
+        \faIcon{envelope} jayesh.dev.acc@gmail.com $\cdot$ 
+        \faIcon{phone-alt} (+91) 9629157061\\
+\end{center}
+
+%==== Contact Me ====%
+\begin{center}
+    \faIcon{linkedin}
+    \href{https://www.linkedin.com/in/jayesh-seth-0b80a8217/}{Jayesh Seth} $\diamond$ 
+    \faIcon{github} \href{https://github.com/MadFlasheroo7}{MadFlasher} $\diamond$
+    \faIcon{twitter} \href{https://twitter.com/Madflasheroo7}{Jayesh Seth}\\
+\end{center}
+
+%==== Education ====%
+\header{ \textbf{Education:}}
+\textbf{Sri Ramakrishna College Of Arts And Science}\hfill Coimbatore, TamilNadu\\
+Bachelor Computer Applications \textit{CGPA: 8.5} \hfill 2019 - 2022\\
+\vspace*{4pt}
+
+%==== Experience ====%
+\header{ \textbf{Community Work:}}
+\vspace{1mm}
+
+\textbf{Flutter Conf In} \hfill Banglore, Remote\\
+\textit{On-Site, Social Media Volunteer}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Volunteered whole Event On-Site
+	\item Made Promotional Content For Event
+\end{itemize}
+\textbf{Google Developers Group Jammu} \hfill Remote\\
+\textit{Flutter Web Developer}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Worked With Flutter Team to build build Devfest Jammu Landing Page
+\end{itemize}
+\textbf{Google Developers Group Coimbatore} \hfill Coimbatore, Remote\\
+\textit{On-Site, Advertising Volunteer}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Worked On-Site with organising event
+\end{itemize}
+
+\header{\textbf{Skills:}}
+\begin{tabular}{ l l }
+	{\textbf{Languages}}:  
+        & Kotlin, Java, Dart, JavaScript, TypeScript, Bash, XML, Python          \\
+	{\textbf{Tools}}:   
+        & Shell Scripting, Git, GitHub Actions, Figma, Adobe XD, Room            \\
+	{\textbf{Frameworks}}:
+        & Jetpack Compose, Flutter, Firebase, Express Js, Next Js, React Js, KMM \\
+	{\textbf{Platforms}}: 
+        & Linux, Google Cloud Platform, Oracle Cloud                             \\
+\end{tabular}
+\vspace{2mm}
+
+\header{ \textbf{Projects:}}
+{\textbf{GDG Jammu Devfest}} {\sl Flutter Web}
+    \hfill \href{https://github.com/GDG-Jammu}{GitHub}\\
+    Built a website for GDG Jammu\textquotesingle{}s Devfest in flutter as community work\\
+\vspace*{2mm}
+
+{\textbf{Learn Flutter}} {\sl Flutter, CI/CD, Github Actions} 
+    \hfill \href{https://github.com/MadFlasheroo7/Learn-Flutter}{GitHub}\\
+    A Repo of multiple sample apps made for beginners to learn flutter and uses CI/CD pipelines to manage all apps\\
+\vspace*{2mm}
+
+{\textbf{MadCons}} {\sl Material You, Jetpack Compose, MVVM, Hilt} 
+    \hfill \href{https://github.com/MadFlasheroo7/madcons}{GitHub}\\
+    A Customised fork of Lawnicons supported over 400+ icons (Icon Type - Dual Tone)\\
+\vspace*{2mm}
+
+{\textbf{Taskr}} {\sl Jetpack Compose, DataStore, Retrofit, MVVM, Hilt} 
+    \hfill \href{https://github.com/taskr-org}{GitHub}\\
+    A Simple Task Manager with well-crafted UI/UX to manage your tasks and goals easily and beautifully! with Custom Backend\\
+\vspace*{2mm}
+
+{\textbf{Mad Picom}} {\sl C, Shell} 
+    \hfill \href{https://github.com/MadFlasheroo7/mad-picom}{GitHub}\\
+    A lightweight compositor for X11 modified to work well with my setup\\
+\vspace*{2mm}
+
+{\textbf{MadWM}} {\sl C, Shell} 
+    \hfill \href{https://github.com/MadFlasheroo7/madwm}{GitHub}\\
+    A patched and personalized DWM with polybar and pywal\\
+\vspace*{2mm}
+
+{\textbf{Food Ordering App}} {\sl Firebase, Material UI, OAuth} 
+    \hfill \href{https://github.com/MadFlasheroo7/Cloud\_Backend}{Github}\\
+    A Simple food ordering app with multiple recycler views, firebase as backend and user auth including OAuth\\
+\vspace*{2mm}
+
+{\textbf{Calculator - Electron}} {\sl electron, material ui} 
+    \hfill \href{https://github.com/MadFlasheroo7/calculator-electron}{GitHub}\\
+    A exact replica of my native android app made using electron with material ui\\
+\vspace*{2mm}
+
+\header{\textbf{OpenSource Contribution:}}
+\textbf{VUR - Void User Repository} 
+    \hfill \href{https://github.com/MadFlasheroo7/VUR}{GitHub}\\
+    void user repository - community provided alternative source repository\\
+\vspace*{2mm}
+
+\textbf{libxft-bgra} 
+    \hfill \href{https://github.com/MadFlasheroo7/libxft-bgra}{GitHub}\\
+    A patched version of libxft that allows for colored emojis to be rendered in suckless software (dmwnu/st etc..)\\
+\vspace*{2mm}
+
+\end{document}
